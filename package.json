@@ -1,0 +1,30 @@
+{
+  "author": "Trubnikov-Panov Egor <egor.a.trubnikov@yandex.ru>",
+  "description": "HTML5 Range",
+  "name": "simple-range",
+  "version": "1.0.0",
+  "repository": "https://github.com/egor-a-trubnikov-panov/simple-range",
+  "licence": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-less": "^3.0.3",
+    "gulp-uglyfly": "^1.4.2",
+    "istanbul": "0.3.x",
+    "jasmine": "2.2.1",
+    "jquery": "^2.1.4",
+    "jscs": "1.11.x",
+    "jshint": "2.x"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "scripts": {
+    "test": "npm run-script jshint && npm run-script check-style",
+    "jshint": "./node_modules/.bin/jshint ./src/index.js",
+    "unit-test-coverage": "./node_modules/.bin/istanbul cover ./node_modules/jasmine/bin/jasmine -- -u bdd -R spec --recursive test",
+    "check-style": "./node_modules/jscs/bin/jscs ./src/index.js"
+  }
+}
